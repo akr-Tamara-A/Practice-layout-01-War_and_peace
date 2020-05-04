@@ -82,7 +82,7 @@
 
 .header {
   flex-basis: 100%;
-  min-height: 100vh;
+
   margin: 0;
   position: relative;
   box-sizing: border-box;
@@ -116,12 +116,25 @@
   text-transform: uppercase;
   font-size: 40px;
   line-height: .8em;
-  transform: scale(3.6, 9);
+  transform: scale(3.6, 9.6);
   transform-origin: bottom;
   align-self: flex-end;
 }
 
+.header__breve {
+  position: absolute;
+  top: 4%;
+  left: 24.3%;
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  border-bottom: .45em solid white;
+  border-left: .1em solid transparent;
+  border-right: .1em solid transparent;
+}
+
 .header__main {
+  min-height: calc(100vh - 355px);
   position: relative;
   margin: 0 auto;
   border-bottom: 2px solid #474747;
@@ -141,29 +154,30 @@
 
 .header__tagline {
   font-family: 'Oswald', sans-serif;
-  font-size: 30px;
+  line-height: 1.2;
+  font-size: 1.7rem;
   font-weight: 300;
-  margin: 1em 0;
+  margin: 2em 0 1.5em 0;
 }
 
 .header__text {
   line-height: 1.4em;
   font-size: 16px;
   font-weight: 400;
-  margin: 1em 0;
-
+  margin: 1.2em 0;
 }
 
 .header__menu {
-
+  margin: 0;
+  padding-bottom: 5px;
 }
 
 .header__menu-list {
-
+  margin: 0;
 }
 
 .header__menu-item {
-
+  margin: 0;
 }
 
 .header__menu-link {
@@ -182,17 +196,34 @@
 }
 
 .header__aside {
-  margin: 0 0 2rem 2rem;
+  margin: 3rem 0 2rem 2rem;
   padding: 0;
   float: right;
-  border: 1px solid seagreen;
+  border: 1px solid #474747;
 }
 
 .book {
   height: 300px;
   width: 205px;
-  background-color: sienna;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   margin: 0;
+  padding: 0;
+}
+
+.book__text {
+  margin: 0;
+  color: white;
+}
+
+.button {
+  width: 205px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: .8em 0;
+  margin: 50px 0 0 0;
+  border-radius: 2px;
+  background-color: #474747;
 }
 
 .page {
@@ -430,7 +461,7 @@
 }
 
 @media screen and (max-width: 800px) {
-  .excerption__subtitle {
+.excerption__subtitle {
   flex-basis: 98%;
 }
 

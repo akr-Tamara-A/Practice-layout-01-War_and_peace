@@ -77,15 +77,13 @@
   margin: 0;
   position: relative;
   box-sizing: border-box;
-  flex-basis: 100%;
+  flex-basis: 100vw;
 }
 
 .header {
   flex-basis: 100%;
-
   margin: 0;
   position: relative;
-  box-sizing: border-box;
 }
 
 .header__header {
@@ -116,7 +114,7 @@
   text-transform: uppercase;
   font-size: 40px;
   line-height: .8em;
-  transform: scale(3.6, 9.6);
+  transform: scale(3.7, 9.6);
   transform-origin: bottom;
   align-self: flex-end;
 }
@@ -134,13 +132,12 @@
 }
 
 .header__main {
-  min-height: calc(100vh - 355px);
   position: relative;
   margin: 0 auto;
   border-bottom: 2px solid #474747;
   position: relative;
   max-width: 780px;
-  padding: 0 20px;
+  padding: 0 10px 20px 10px;
 
 }
 
@@ -149,6 +146,7 @@
   line-height: 1;
   font-size: 0;
   font-weight: 300;
+  color: #222222;
   margin: 1em 0;
 }
 
@@ -157,27 +155,22 @@
   line-height: 1.2;
   font-size: 1.7rem;
   font-weight: 300;
-  margin: 2em 0 1.5em 0;
+  margin: 3rem 0 1em 0;
+  color: #222222;
 }
 
-.header__text {
+.text {
   line-height: 1.4em;
   font-size: 16px;
   font-weight: 400;
-  margin: 1.2em 0;
+  margin: 1em 0;
+  color: #222222;
 }
 
 .header__menu {
   margin: 0;
   padding-bottom: 5px;
-}
-
-.header__menu-list {
-  margin: 0;
-}
-
-.header__menu-item {
-  margin: 0;
+  
 }
 
 .header__menu-link {
@@ -185,46 +178,67 @@
   text-align: center;
   font-size: 1.5rem;
   font-weight: 300;
-  color: black;
+  color: #222222;;
 }
 
-.header__text-link {
+.text-link {
   line-height: 1.4em;
   font-size: 16px;
   font-weight: 400;
   color: #667eea;
 }
 
+.text-link:hover {
+  color: #825ba8;
+}
+
 .header__aside {
   margin: 3rem 0 2rem 2rem;
   padding: 0;
   float: right;
-  border: 1px solid #474747;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
 }
 
-.book {
-  height: 300px;
-  width: 205px;
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  margin: 0;
-  padding: 0;
+.book-cover {
+  font-size: 0;
+  border: 1px solid #222222;
+  max-width: 205px;
+  max-height: auto;
 }
 
-.book__text {
-  margin: 0;
-  color: white;
-}
 
 .button {
   width: 205px;
   font-family: 'Oswald', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.2;
   text-transform: uppercase;
-  padding: .8em 0;
-  margin: 50px 0 0 0;
-  border-radius: 2px;
-  background-color: #474747;
+  padding: .5em 0;
+  margin: 20px auto 30px auto;
+  border-radius: 3px;
+  text-align: center;
 }
+
+.button__header {
+  background-color: #222222;
+  text-decoration: none;
+  color: white;
+}
+
+.button__content {
+  background-color: #667eea;
+  text-decoration: none;
+  color: white;
+}
+
+.button:hover {
+  background-color: #825ba8;
+}
+
+
 
 .page {
   display: flex;
@@ -240,11 +254,16 @@
   position: relative;
   margin: 0 auto;
   padding: 0 10px 0 10px;
-
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   box-sizing: border-box;
+}
+
+.heading {
+  margin: .8em 0;
+  font-family: 'Oswald', sans-serif;
+  line-height: 1em;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #222222;
 }
 
 .content__heading {
@@ -258,6 +277,10 @@
   flex-basis: 100%;
 }
 
+.content__link {
+  position: relative;
+  display: flex;
+}
 
 .excerption {
   flex-basis: 100%;
@@ -272,15 +295,11 @@
   box-sizing: border-box;
 }
 
-.excerption__heading {
+.heading__excerption {
   position: relative;
   color: white;
-  margin: 0 auto;
-  padding: 1em;
-  font-family: 'Oswald', sans-serif;
-  line-height: 1em;
-  font-size: 50px;
-  font-weight: 500;
+  margin: 1em auto;
+
 }
 
 .excerption__section {
@@ -331,6 +350,7 @@
   font-weight: normal;
   margin: 0;
   padding: 1.8em;
+  color: #222222;
 }
 
 .excerption__author {
@@ -360,15 +380,15 @@
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   margin: 1em 0;
+  color: #222222;
 }
-
-
 
 .author__text {
   line-height: 1.4em;
   font-size: 16px;
   font-weight: 400;
   margin: 2em 0;
+  color: #222222;
 }
 
 .author__link {
@@ -485,9 +505,14 @@
   max-height: 200px;
 }
 
-.book {
-  transform: scale(.7);
+.book-cover {
+  max-width: 150px;
 }
+
+.button {
+  width: 150px;
+}
+
 
 }
 

@@ -122,7 +122,7 @@
 .header__breve {
   position: absolute;
   top: 4%;
-  left: 24.3%;
+  left: 23.3%;
   height: 2em;
   width: 2em;
   border-radius: 50%;
@@ -192,6 +192,10 @@
   color: #825ba8;
 }
 
+.text-link:focus {
+  background-color: rgba(102, 126, 234, 0.5);
+}
+
 .header__aside {
   margin: 3rem 0 2rem 2rem;
   padding: 0;
@@ -208,7 +212,6 @@
   max-width: 205px;
   max-height: auto;
 }
-
 
 .button {
   width: 205px;
@@ -237,8 +240,6 @@
 .button:hover {
   background-color: #825ba8;
 }
-
-
 
 .page {
   display: flex;
@@ -282,6 +283,33 @@
   display: flex;
 }
 
+.content__list {
+  counter-reset: book-counter;
+  list-style: none;
+  padding: 0 4rem;
+  margin: 1rem 3rem;
+}
+
+.content__list-item_subtitle {
+  counter-increment: book-counter;
+  line-height: 2;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.content__list-item_subtitle::before {
+  content: "Том "counter(book-counter)".";
+  color: #667eea;
+  line-height: 2;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  position: absolute;
+  left: 4.3rem;
+}
+
 .excerption {
   flex-basis: 100%;
   position: relative;
@@ -299,7 +327,6 @@
   position: relative;
   color: white;
   margin: 1em auto;
-
 }
 
 .excerption__section {
@@ -452,7 +479,7 @@
 }
 
 
-@media screen and (max-width: 1000px) and (min-width: 800px) {
+@media screen and (max-width: 800px) and (min-width: 640px) {
   .excerption__subtitle {
     flex-basis: 48%;
   }
@@ -480,7 +507,7 @@
 
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 640px) {
 .excerption__subtitle {
   flex-basis: 98%;
 }
